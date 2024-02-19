@@ -69,13 +69,21 @@ def matrix_inverse(matrix):
         print(elementary_matrix)
 
     return identity
-
+"""
+Date:19/02/2024
+Groups: Raphael Benoliel 209946854
+Daniel Vaknin 314753161
+Maor Hadad 312469463
+Bar Cohen 316164938
+Git: https://github.com/MaorHadadLD/analiza/tree/main/LinearEquations
+"""
 
 if __name__ == '__main__':
 
-    A = np.array([[1, 0.5, 0.15],
-                  [0.5, 0.15, 0.20],
-                  [0.15, 0.20, 0.25]])
+    A = np.array( [[1, 0.5, 0.333],
+            [0.5, 0.15, 0.25],
+            [0.333, 0.25, 0.2]]
+)
 
     try:
         A_inverse = matrix_inverse(A)
