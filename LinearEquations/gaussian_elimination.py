@@ -92,9 +92,9 @@ Git: https://github.com/MaorHadadLD/analiza/tree/main/LinearEquations
 
 if __name__ == '__main__':
 
-    A_b = [[1, 0.5, 0.15],
-            [0.5, 0.15, 0.20],
-            [0.15, 0.20, 0.25]]
+    A_b = [[1, 0.5, 0.333],
+            [0.5, 0.15, 0.25],
+            [0.333, 0.25, 0.2]]
 
     result = gaussianElimination(A_b)
     if isinstance(result, str):
