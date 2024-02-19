@@ -1,5 +1,4 @@
 import numpy as np
-from numpy.linalg import norm, inv
 
 
 def gaussianElimination(mat):
@@ -55,7 +54,7 @@ def forward_substitution(mat):
             m = mat[i][k] / mat[k][k]
 
             # subtract fth multiple of corresponding kth row element
-            for j in range(k + 1, N + 1):
+            for j in range(k + 1, N):  # Change N + 1 to N
                 mat[i][j] -= mat[k][j] * m
 
             # filling lower triangular matrix with zeros
@@ -82,13 +81,20 @@ def backward_substitution(mat):
 
     return x
 
+"""
+Date:
+Groups: Raphael Benoliel 209946854
+Daniel Vaknin 314753161
+Maor Hadad 312469463
+Bar Cohen 316164938
+Git: https://github.com/MaorHadadLD/analiza/tree/main/LinearEquations
+"""
 
 if __name__ == '__main__':
 
-    A_b = [[1, -1, 2, -1, -8],
-        [2, -2, 3, -3, -20],
-        [1, 1, 1, 0, -2],
-        [1, -1, 4, 3, 4]]
+    A_b = [[1, 0.5, 0.15],
+            [0.5, 0.15, 0.20],
+            [0.15, 0.20, 0.25]]
 
     result = gaussianElimination(A_b)
     if isinstance(result, str):
