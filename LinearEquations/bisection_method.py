@@ -51,8 +51,15 @@ def bisection_method(f, a, b, tol=1e-6):
     return c  # return the current root
 
 
-
+"""
+Date:18/03/2024
+Groups: Raphael Benoliel 209946854
+Daniel Vaknin 314753161
+Maor Hadad 312469463
+Bar Cohen 316164938
+name: Maor Hadad 312469463
+"""
 if __name__ == '__main__':
-    f = lambda x: x**2 - 4 * math.sin(x)
-    roots = bisection_method(f, 1, 3)
+    f = lambda x: (6*x**3 + 1*x**2 + 2) / (2*x - 6)
+    roots = bisection_method(f, -3, 0)
     print(f"\nThe equation f(x) has an approximate root at x = {roots}")
