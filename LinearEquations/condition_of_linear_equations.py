@@ -2,7 +2,7 @@ import numpy as np
 from inverse_matrix import matrix_inverse
 from matrix_utility import print_matrix
 
-# טיב ההצגה
+
 def norm(mat):
     size = len(mat)
     max_row = 0
@@ -40,24 +40,28 @@ def condition_number(A):
 
     return cond
 
-"""
-Date:19/02/2024
-Groups: Raphael Benoliel 209946854
-Daniel Vaknin 314753161
-Maor Hadad 312469463
-Bar Cohen 316164938
-Git: https://github.com/MaorHadadLD/analiza/tree/main/LinearEquations
-"""
-
 if __name__ == '__main__':
-    A = np.array([[1, 0.5, 0.333],
-            [0.5, 0.15, 0.25],
-            [0.333, 0.25, 0.2]])
+    A = np.array([[-1, -2, 5],
+                  [4, -1, 1],
+                  [1, 6, 2]])
     cond = condition_number(A)
+
+    value = norm(A) + 2  # Adding the question number 2
+
+    print("\nMax Norm of A:", norm(A), "\n")
+
+    # Print the value obtained by adding the norm of the matrix of coefficients with the question number
+    print("Value obtained by adding the norm of the matrix of coefficients with the question number:", value)
+
+
 
     print("\n condition number: ", cond)
 
+# Calculate the value by adding the norm of the matrix of coefficients with the question number
+    value = norm(A) + 2  # Adding the question number 2
 
 
+    print("\nMax Norm of A:", norm(A), "\n")
 
-
+    # Print the value obtained by adding the norm of the matrix of coefficients with the question number
+    print("Value obtained by adding the norm of the matrix of coefficients with the question number:", value)
