@@ -87,7 +87,7 @@ class Spline:
 
 if __name__ == "__main__":
         # Given points
-        points = [(0.35, -3.65), (0.4, -3), (0.55, -2.6), (0.65, 0.2), (0.7, 1.67)]
+        points = [(0.2, -1.0), (0.53, -7), (1.65, -2.6), (0.2, 0.3), (1.7, 1.4)]
 
         # Separate x and y coordinates
         xs = [point[0] for point in points]
