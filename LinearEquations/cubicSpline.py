@@ -84,10 +84,17 @@ class Spline:
         b = -self.ks[i] * (self.xs[i] - self.xs[i - 1]) + (self.ys[i] - self.ys[i - 1])
         q = (1 - t) * self.ys[i - 1] + t * self.ys[i] + t * (1 - t) * (a * (1 - t) + b * t)
         return q
-
+"""
+Date:08/04/2024
+Groups: Raphael Benoliel 209946854
+Daniel Vaknin 314753161
+Maor Hadad 312469463
+Bar Cohen 316164938
+name: Maor Hadad 312469463
+"""
 if __name__ == "__main__":
         # Given points
-        points = [(0.2, -1.0), (0.53, -7), (1.65, -2.6), (0.2, 0.3), (1.7, 1.4)]
+        points = [(0.35, -3.65), (0.4, -3.0), (0.55, -2.6), (0.65, 0.2), (0.7, 1.67)]
 
         # Separate x and y coordinates
         xs = [point[0] for point in points]

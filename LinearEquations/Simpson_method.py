@@ -5,6 +5,7 @@ import sympy as sp
 from sympy.utilities.lambdify import lambdify
 
 x = sp.symbols('x')
+
 def simpsons_rule(f, a, b, n):
     """
     Simpson's Rule for Numerical Integration
@@ -36,13 +37,20 @@ def simpsons_rule(f, a, b, n):
 
     return integral
 
-
+"""
+Date:08/04/2024
+Groups: Raphael Benoliel 209946854
+Daniel Vaknin 314753161
+Maor Hadad 312469463
+Bar Cohen 316164938
+name: Maor Hadad 312469463
+"""
 if __name__ == '__main__':
-    f = lambda x: math.e ** (x ** 2)
-    n = 4
-    a=0
-    b=1
+    f = lambda x: (2*x + math.cos(x**3 + 2*x**2 - 6)) / (x + 2*math.e**-2*x)
+    n = 34
+    a = -2.9
+    b = -1.4
 
-    print( f" Division into n={n} sections ")
-    integral = simpsons_rule(f, 0, 1, n)
-    print(f"Numerical Integration of definite integral in range [{a},{b}] is {integral}")
+    print(f"Division into n={n} sections ")
+    integral = simpsons_rule(f, a, b, n)
+    print(f"Numerical Integration of definite integral in range [{a},{b}] is {integral:.5f}")
